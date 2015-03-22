@@ -91,7 +91,7 @@ class HDFSConfig(object):
 
     @classmethod
     def get_external_config(cls):
-        if os.environ.get('HADOOP_HOME'):
+        if os.environ.get('HADOOP_CONF_DIR'):
             configs = cls.get_config_from_env()
             return configs
         else:
