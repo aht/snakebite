@@ -17,10 +17,10 @@ class HDFSConfig(object):
 
         Returns list of dicts - list of namenode representations
         '''
-        core_path = os.path.join(os.environ['HADOOP_HOME'], 'conf', 'core-site.xml')
+        core_path = os.path.join(os.environ['HADOOP_CONF_DIR'], 'core-site.xml')
         configs = cls.read_core_config(core_path)
 
-        hdfs_path = os.path.join(os.environ['HADOOP_HOME'], 'conf', 'hdfs-site.xml')
+        hdfs_path = os.path.join(os.environ['HADOOP_CONF_DIR'], 'hdfs-site.xml')
         tmp_config = cls.read_hdfs_config(hdfs_path)
 
         if tmp_config:
